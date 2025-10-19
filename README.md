@@ -1,7 +1,10 @@
 # HotkeySMS
 ### Simple AutoHotkey script to send SMS messages via Gmail SMTP using keyboard hotkeys.
 
-Originally created for Reddit user /u/Gibscreen to add a "drink" button to a sim racing steering wheel that sends a text requesting a beer. Map your steering wheel button to a hotkey using your device's software (like SimHub or your wheel's configuration tool), then this script triggers the SMS on that hotkey.
+## The Problem
+
+Originally created for Reddit user /u/Gibscreen to add a "drink" button to a sim racing steering wheel that sends a text requesting a beer. The initial problem was sending an SMS with a push of a button on a sim racing wheel. While SimHub doesn't support direct script mapping, it easily maps key bindings, which led me to write an AutoHotkey-based trigger mechanism that listens for keyboard shortcuts and sends SMS messages via a PowerShell script and Gmail SMTP. Map your steering wheel button to a hotkey using your device's software (like SimHub or your wheel's configuration tool), then this script triggers the SMS on that hotkey.
+
 
 ![Notification Example](media/notification.png)
 
