@@ -1,0 +1,28 @@
+{
+  "gmailAddress": "your-email@gmail.com",
+  "gmailAppPassword": "your-app-password",
+  "telusSmsGateway": "5555555@msg.telus.com",
+  "timestampEnabled": true,
+  "hotkeys": [
+    {
+      "hotkey": "^!+1",
+      "message": "Driver requesting a beer!"
+    },
+    {
+      "hotkey": "^!+2",
+      "message": "On my way!"
+    },
+    {
+      "hotkey": "^!+3",
+      "message": "Running late, be there soon"
+    },
+    {
+      "hotkey": "^!+4",
+      "message": "If you ain't first, you're last"
+    },
+    {
+      "hotkey": "^!+5",
+      "message": "Sometimes you've just got to lick the stamp and send it. - Daniel Riccardo"
+    }
+  ]
+}
