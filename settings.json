@@ -1,28 +1,106 @@
 {
   "gmailAddress": "your-email@gmail.com",
-  "gmailAppPassword": "your-app-password",
-  "telusSmsGateway": "5555555@msg.telus.com",
+  "gmailAppPassword": "abcdefghijklmnop",
   "timestampEnabled": true,
+  "recipients": [
+    {
+      "index": 0,
+      "name": "Danica",
+      "smsGateway": "5555555@msg.telus.com"
+    },
+    {
+      "index": 1,
+      "name": "Daniel",
+      "smsGateway": "5555555@msg.telus.com"
+    },
+    {
+      "index": 2,
+      "name": "Lewis",
+      "smsGateway": "5555555@msg.telus.com"
+    }
+  ],
+  "messages": [
+    "0: Driver requesting a beer!",
+    "1: On my way!",
+    "2: Running late, be there soon",
+    "3: If you ain't first, you're last",
+    "4: Sometimes you've just got to lick the stamp and send it. - Daniel Riccardo"
+  ],
   "hotkeys": [
     {
       "hotkey": "^!+1",
-      "message": "Driver requesting a beer!"
+      "recipientIndex": 0,
+      "messageIndex": 0
     },
     {
       "hotkey": "^!+2",
-      "message": "On my way!"
+      "recipientIndex": 0,
+      "messageIndex": 1
     },
     {
       "hotkey": "^!+3",
-      "message": "Running late, be there soon"
+      "recipientIndex": 0,
+      "messageIndex": 2
     },
     {
       "hotkey": "^!+4",
-      "message": "If you ain't first, you're last"
+      "recipientIndex": 0,
+      "messageIndex": 3
     },
     {
       "hotkey": "^!+5",
-      "message": "Sometimes you've just got to lick the stamp and send it. - Daniel Riccardo"
+      "recipientIndex": 0,
+      "messageIndex": 4
+    },
+    {
+      "hotkey": "^!+6",
+      "recipientIndex": 1,
+      "messageIndex": 0
+    },
+    {
+      "hotkey": "^!+7",
+      "recipientIndex": 1,
+      "messageIndex": 1
+    },
+    {
+      "hotkey": "^!+8",
+      "recipientIndex": 1,
+      "messageIndex": 2
+    },
+    {
+      "hotkey": "^!+9",
+      "recipientIndex": 1,
+      "messageIndex": 3
+    },
+    {
+      "hotkey": "^!+0",
+      "recipientIndex": 1,
+      "messageIndex": 4
+    },
+    {
+      "hotkey": "^!+a",
+      "recipientIndex": 2,
+      "messageIndex": 0
+    },
+    {
+      "hotkey": "^!+s",
+      "recipientIndex": 2,
+      "messageIndex": 1
+    },
+    {
+      "hotkey": "^!+d",
+      "recipientIndex": 2,
+      "messageIndex": 2
+    },
+    {
+      "hotkey": "^!+f",
+      "recipientIndex": 2,
+      "messageIndex": 3
+    },
+    {
+      "hotkey": "^!+g",
+      "recipientIndex": 2,
+      "messageIndex": 4
     }
   ]
 }

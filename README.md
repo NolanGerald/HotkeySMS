@@ -54,8 +54,9 @@ Example: For phone number 555-123-4567, use `5551234567@gateway.com`
 2. Edit `settings.json` with:
    - Your Gmail address
    - Your Gmail app password (from step 2 above)
-   - The recipient's SMS gateway address (from the list above)
-   - Configure up to 5 different hotkeys with custom messages
+   - Up to 3 recipients with their SMS gateway addresses (from the list above)
+   - Configure up to 5 different messages
+   - Assign hotkeys for each recipient/message combination (15 total possible)
 3. Run `send-sms.ahk`
 4. Press any configured hotkey to send the SMS
 
@@ -78,25 +79,47 @@ To have the script run automatically when Windows starts:
 
 ## Hotkeys
 
-The script supports 5 pre-configured hotkeys (Ctrl+Alt+Shift+1 through 5):
+The script supports up to 15 hotkey combinations to send 5 different messages to 3 different recipients.
 
-- **Ctrl+Alt+Shift+1**: Custom message 1
-- **Ctrl+Alt+Shift+2**: Custom message 2
-- **Ctrl+Alt+Shift+3**: Custom message 3
-- **Ctrl+Alt+Shift+4**: Custom message 4
-- **Ctrl+Alt+Shift+5**: Custom message 5
+### Default Hotkey Layout
 
-Edit the messages in `settings.json` to customize what each hotkey sends.
+#### Recipient 1
+- **Ctrl + Alt + Shift + 1** - Message 0
+- **Ctrl + Alt + Shift + 2** - Message 1
+- **Ctrl + Alt + Shift + 3** - Message 2
+- **Ctrl + Alt + Shift + 4** - Message 3
+- **Ctrl + Alt + Shift + 5** - Message 4
+
+#### Recipient 2
+- **Ctrl + Alt + Shift + 6** - Message 0
+- **Ctrl + Alt + Shift + 7** - Message 1
+- **Ctrl + Alt + Shift + 8** - Message 2
+- **Ctrl + Alt + Shift + 9** - Message 3
+- **Ctrl + Alt + Shift + 0** - Message 4
+
+#### Recipient 3
+- **Ctrl + Alt + Shift + A** - Message 0
+- **Ctrl + Alt + Shift + S** - Message 1
+- **Ctrl + Alt + Shift + D** - Message 2
+- **Ctrl + Alt + Shift + F** - Message 3
+- **Ctrl + Alt + Shift + G** - Message 4
+
+Edit the recipients, messages, and hotkey mappings in `settings.json` to customize.
 
 ## Settings
 
 - `gmailAddress`: Your Gmail address
 - `gmailAppPassword`: Your Gmail app password (NOT your regular password)
-- `telusSmsGateway`: Recipient's phone number @ carrier's SMS gateway
 - `timestampEnabled`: Set to `true` to add `[HH:mm]` timestamp to messages, `false` to disable
-- `hotkeys`: Array of hotkey/message pairs
+- `recipients`: Array of up to 3 recipients
+  - `index`: Recipient index (0-2) for use in hotkey mappings
+  - `name`: Recipient name (displayed in notification)
+  - `smsGateway`: Recipient's phone number @ carrier's SMS gateway
+- `messages`: Array of up to 5 messages (prefix with index number like `0:`, `1:`, etc.)
+- `hotkeys`: Array of hotkey mappings
   - `hotkey`: AutoHotkey format (`^`=Ctrl, `!`=Alt, `+`=Shift)
-  - `message`: The SMS text to send
+  - `recipientIndex`: Which recipient to send to (0-2)
+  - `messageIndex`: Which message to send (0-4)
 
 > [!IMPORTANT]
 > After changing any settings in `settings.json`, you must reload the script:
